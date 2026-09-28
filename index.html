@@ -7,12 +7,12 @@
 <meta name="description" content="Mobile mechanic in Montreal — oil changes, brakes, tires, diagnostics & battery service at your home or office. Same-day available. From $139. Call (438) 807-1988.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="header-inner">
     <a href="#top" class="brand">
       <span class="brand-mark">AAA</span>
@@ -22,12 +22,13 @@
       <a href="#services" data-i18n="nav.services">Services</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
       <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-actions">
       <button type="button" class="lang-toggle" id="langToggle">FR</button>
       <a href="tel:+14388071988" class="btn btn-call">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>(438) 807-1988</span>
       </a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
@@ -36,23 +37,91 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="hero-bg"><img src="images/van.jpg" alt="Mobile mechanic van at a home"></div>
-  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
   <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="hero-kicker" data-i18n="hero.kicker">⚡ Same-day available · Montréal</p>
-      <h1 data-i18n="hero.title">Your mechanic<br>comes to you.</h1>
-      <p class="hero-sub" data-i18n="hero.sub">Oil changes, brakes, tires, diagnostics &amp; more — done in your driveway or office parking lot. No shop, no waiting room.</p>
+    <div class="hero-copy reveal">
+      <p class="hero-kicker"><span class="pulse"></span><span data-i18n="hero.kicker">Same-day available · Montréal</span></p>
+      <h1><span data-i18n="hero.l1">Your mechanic</span><br><em data-i18n="hero.l2">comes to you.</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Oil changes, brakes, tires, diagnostics &amp; more — done in your driveway or office parking lot. No shop, no waiting room, no wasted afternoon.</p>
+      <div class="hero-ctas">
+        <a href="#quote" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Get my free quote</a>
+        <a href="tel:+14388071988" class="btn btn-ghost btn-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="hero.cta2">Call now</span>
+        </a>
+      </div>
       <div class="hero-trust">
-        <span class="stars">★★★★★</span>
-        <span data-i18n="hero.rating"><strong>5.0</strong> · 44 Google reviews</span>
-        <span class="dot">·</span>
-        <span data-i18n="hero.price">From <strong>$139</strong></span>
+        <div class="trust-item"><span class="stars">★★★★★</span><span data-i18n="hero.rating"><strong>5.0</strong> · 44 Google reviews</span></div>
+        <div class="trust-item"><span class="trust-num">$139</span><span data-i18n="hero.price">starting price</span></div>
       </div>
     </div>
-    <form class="quote-form" id="quoteForm">
+    <div class="hero-visual reveal">
+      <div class="hero-img-card">
+        <img src="images/van.jpg" alt="Mobile mechanic van arriving at a home">
+        <div class="float-badge badge-1"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></span><span><strong data-i18n="hero.b1t">Same-day</strong><small data-i18n="hero.b1s">booked by afternoon</small></span></div>
+        <div class="float-badge badge-2"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7z"/></svg></span><span><strong data-i18n="hero.b2t">Fully equipped</strong><small data-i18n="hero.b2s">the shop, on wheels</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stats-inner">
+    <div class="stat reveal"><span class="stat-num" data-count="5.0" data-dec="1">0</span><span class="stat-star">★</span><p data-i18n="stats.1">Google rating</p></div>
+    <div class="stat reveal"><span class="stat-num" data-count="44">0</span><span class="stat-plus">+</span><p data-i18n="stats.2">verified reviews</p></div>
+    <div class="stat reveal"><span class="stat-num" data-count="60">0</span><span class="stat-unit" data-i18n="stats.sec">sec</span><p data-i18n="stats.3">to book online</p></div>
+    <div class="stat reveal"><span class="stat-num" data-count="7">0</span><span class="stat-unit" data-i18n="stats.days">/7</span><p data-i18n="stats.4">days a week</p></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="services.kicker">What we do</p>
+    <h2 class="reveal" data-i18n="services.title">Everything a shop does.<br>At your door.</h2>
+    <p class="section-sub reveal" data-i18n="services.sub">One van, every tool, zero waiting rooms.</p>
+    <div class="service-grid">
+      <article class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.7s6.5 7 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.7 12 2.7z"/></svg></div>
+        <h3 data-i18n="services.s1t">Oil Change</h3><p data-i18n="services.s1d">Full synthetic with filter — done while you stay inside.</p><span class="service-from" data-i18n="services.from">from $139</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3.5M12 17.5V21M3 12h3.5M17.5 12H21"/></svg></div>
+        <h3 data-i18n="services.s2t">Brakes</h3><p data-i18n="services.s2d">Pads and rotors replaced in your driveway, torqued to spec.</p><span class="service-from ghost" data-i18n="services.quote">free quote</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3a9 9 0 0 1 7.8 4.5M5.7 6.9A9 9 0 0 1 12 3M12 21a9 9 0 0 1-7.8-4.5M18.3 17.1A9 9 0 0 1 12 21"/></svg></div>
+        <h3 data-i18n="services.s3t">Tires</h3><p data-i18n="services.s3d">Seasonal swaps and repairs — pressure checked, ready to roll.</p><span class="service-from" data-i18n="services.from139">from $139</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
+        <h3 data-i18n="services.s4t">Diagnostics</h3><p data-i18n="services.s4d">Check-engine light and full system scans, pro equipment.</p><span class="service-from ghost" data-i18n="services.quote2">free quote</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="15" height="10" rx="2"/><path d="M21 11v4M7 11v4M11 11v4"/></svg></div>
+        <h3 data-i18n="services.s5t">Battery</h3><p data-i18n="services.s5d">Tested on the spot — replaced on the spot if it's done.</p><span class="service-from ghost" data-i18n="services.quote3">free quote</span>
+      </article>
+      <article class="service-card reveal card-cta">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14M6 17l1.5-5h9L18 17M7.5 12V9.5A1.5 1.5 0 0 1 9 8h6a1.5 1.5 0 0 1 1.5 1.5V12"/><circle cx="8" cy="18.5" r="1.8"/><circle cx="16" cy="18.5" r="1.8"/></svg></div>
+        <h3 data-i18n="services.s6t">Something Else?</h3><p data-i18n="services.s6d">Tell us what's wrong — if we can fix it mobile, we will.</p><a href="#quote" class="service-link" data-i18n="services.ask">Ask us →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-copy reveal">
+      <p class="kicker kicker-light" data-i18n="quote.kicker">Free quote</p>
+      <h2 data-i18n="quote.title">Tell us what you need.<br>We handle the rest.</h2>
+      <p data-i18n="quote.sub">Sixty seconds, no obligation. We call back within minutes with your price — confirmed before we ever roll the van.</p>
+      <ul class="quote-points">
+        <li data-i18n="quote.p1">No hidden charges, ever</li>
+        <li data-i18n="quote.p2">Price locked before we arrive</li>
+        <li data-i18n="quote.p3">Home, office, or roadside</li>
+      </ul>
+    </div>
+    <form class="quote-form reveal" id="quoteForm">
       <h3 data-i18n="form.title">Get your free quote</h3>
-      <p class="form-sub" data-i18n="form.sub">We call back within minutes.</p>
       <label>
         <span data-i18n="form.service">What do you need?</span>
         <select id="fService" required>
@@ -70,105 +139,76 @@
         <input type="text" id="fCar" data-i18n-ph="form.carPh" placeholder="e.g. 2020 Honda Civic" required>
       </label>
       <div class="form-row">
-        <label>
-          <span data-i18n="form.name">First name</span>
-          <input type="text" id="fName" required>
-        </label>
-        <label>
-          <span data-i18n="form.phone">Phone</span>
-          <input type="tel" id="fPhone" placeholder="514-555-0123" required>
-        </label>
+        <label><span data-i18n="form.name">First name</span><input type="text" id="fName" required></label>
+        <label><span data-i18n="form.phone">Phone</span><input type="tel" id="fPhone" placeholder="514-555-0123" required></label>
       </div>
-      <button type="submit" class="btn btn-primary btn-block" data-i18n="form.cta">Get my free quote →</button>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="form.cta">Get my free quote →</button>
+      <p class="form-note" data-i18n="form.note">We call back within minutes.</p>
       <p class="form-done" id="formDone" hidden>
-        <strong data-i18n="form.doneT">You're booked 🙌</strong><br>
+        <strong data-i18n="form.doneT">You're booked.</strong><br>
         <span data-i18n="form.doneS">Got your request — we're calling right now to lock in your time slot.</span>
       </p>
     </form>
   </div>
 </section>
 
-<section class="strip">
-  <div class="wrap strip-inner">
-    <span data-i18n="strip.1">🔩 Fully mobile — we come to you</span>
-    <span data-i18n="strip.2">📅 Same-day available</span>
-    <span data-i18n="strip.3">🔧 Certified technicians</span>
-    <span data-i18n="strip.4">💰 From $139 · no hidden charges</span>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="wrap">
-    <p class="kicker" data-i18n="services.kicker">Services</p>
-    <h2 data-i18n="services.title">Everything a shop does, at your door</h2>
-    <div class="service-grid">
-      <article class="service-card"><div class="service-icon">🛢️</div><h3 data-i18n="services.s1t">Oil Change</h3><p data-i18n="services.s1d">Full synthetic oil changes with filter — done while you stay inside.</p><span class="service-from" data-i18n="services.from">from $139</span></article>
-      <article class="service-card"><div class="service-icon">🔧</div><h3 data-i18n="services.s2t">Brakes</h3><p data-i18n="services.s2d">Pads and rotors replaced in your driveway, torqued to spec.</p><span class="service-from" data-i18n="services.quote">free quote</span></article>
-      <article class="service-card"><div class="service-icon">🏎️</div><h3 data-i18n="services.s3t">Tires</h3><p data-i18n="services.s3d">Seasonal swaps and tire repair — pressure checked, ready to roll.</p><span class="service-from" data-i18n="services.from139">from $139</span></article>
-      <article class="service-card"><div class="service-icon">🔍</div><h3 data-i18n="services.s4t">Diagnostics</h3><p data-i18n="services.s4d">Check-engine light and full system scans with pro equipment.</p><span class="service-from" data-i18n="services.quote2">free quote</span></article>
-      <article class="service-card"><div class="service-icon">⚡</div><h3 data-i18n="services.s5t">Battery</h3><p data-i18n="services.s5d">Tested on the spot, replaced on the spot if it's done.</p><span class="service-from" data-i18n="services.quote3">free quote</span></article>
-      <article class="service-card"><div class="service-icon">🚗</div><h3 data-i18n="services.s6t">Something Else?</h3><p data-i18n="services.s6d">Tell us what's wrong — if we can fix it mobile, we will.</p><span class="service-from" data-i18n="services.quote4">free quote</span></article>
-    </div>
-  </div>
-</section>
-
 <section class="how" id="how">
   <div class="wrap">
-    <p class="kicker" data-i18n="how.kicker">How it works</p>
-    <h2 data-i18n="how.title">Booked in 3 steps</h2>
+    <p class="kicker reveal" data-i18n="how.kicker">How it works</p>
+    <h2 class="reveal" data-i18n="how.title">Booked in 3 steps</h2>
     <div class="steps">
-      <div class="step"><span class="step-num">1</span><h3 data-i18n="how.s1t">Book in 60 seconds</h3><p data-i18n="how.s1d">Fill the form above. We call back fast, confirm your vehicle, and lock in a time.</p></div>
-      <div class="step"><span class="step-num">2</span><h3 data-i18n="how.s2t">We come to you</h3><p data-i18n="how.s2d">Our tech shows up at your home, office, or wherever your car is parked — fully equipped.</p></div>
-      <div class="step"><span class="step-num">3</span><h3 data-i18n="how.s3t">Done in under an hour</h3><p data-i18n="how.s3d">Work completed to spec, area left clean. You never left your day.</p></div>
+      <div class="step reveal"><span class="step-num">1</span><h3 data-i18n="how.s1t">Book in 60 seconds</h3><p data-i18n="how.s1d">Fill the form above. We call back fast, confirm your vehicle, and lock in a time that works.</p></div>
+      <div class="step reveal"><span class="step-num">2</span><h3 data-i18n="how.s2t">We come to you</h3><p data-i18n="how.s2d">Our tech shows up at your home, office, or wherever your car is parked — fully equipped.</p></div>
+      <div class="step reveal"><span class="step-num">3</span><h3 data-i18n="how.s3t">Done in under an hour</h3><p data-i18n="how.s3d">Work completed to spec, area left clean. You never left your day.</p></div>
     </div>
-  </div>
-</section>
-
-<section class="why">
-  <div class="wrap why-grid">
-    <div class="why-img"><img src="images/tire.jpg" alt="Technician changing a tire at a home"></div>
-    <div class="why-copy">
-      <p class="kicker" data-i18n="why.kicker">Why us</p>
-      <h2 data-i18n="why.title">The smarter way to service your car</h2>
-      <ul class="why-list">
-        <li><strong data-i18n="why.l1t">Fully mobile</strong><span data-i18n="why.l1d">No shop, no waiting room. We show up with everything.</span></li>
-        <li><strong data-i18n="why.l2t">Same-day available</strong><span data-i18n="why.l2d">Call in the morning, serviced by afternoon.</span></li>
-        <li><strong data-i18n="why.l3t">Certified technicians</strong><span data-i18n="why.l3d">Properly torqued, pressure checked, inspected — done right.</span></li>
-        <li><strong data-i18n="why.l4t">Transparent pricing</strong><span data-i18n="why.l4d">From $139. Price confirmed before we show up — no hidden charges.</span></li>
-      </ul>
-    </div>
+    <div class="how-img reveal"><img src="images/tire.jpg" alt="Technician changing a tire at a customer's home"></div>
   </div>
 </section>
 
 <section class="reviews" id="reviews">
   <div class="wrap">
-    <p class="kicker kicker-light" data-i18n="reviews.kicker">Reviews</p>
-    <h2 data-i18n="reviews.title">What customers say</h2>
-    <div class="review-score">
+    <p class="kicker kicker-light reveal" data-i18n="reviews.kicker">Reviews</p>
+    <h2 class="reveal" data-i18n="reviews.title">Rated 5.0 by people<br>who never left home.</h2>
+    <div class="review-score reveal">
       <span class="score-num">5.0</span>
-      <div><div class="stars">★★★★★</div><p data-i18n="reviews.count">44 Google reviews</p></div>
+      <div class="score-meta"><div class="stars">★★★★★</div><p data-i18n="reviews.count">44 Google reviews</p></div>
     </div>
     <div class="review-cards">
-      <blockquote><p data-i18n="reviews.r1">“Booked in the morning, they were in my driveway by early afternoon. Whole swap took maybe 40 minutes. Honestly couldn't believe how easy it was.”</p><cite>— Jean-François L. · Google</cite></blockquote>
-      <blockquote><p data-i18n="reviews.r2">“They came to my work parking lot. I didn't leave my desk. Tires swapped and torqued properly — they texted when done.”</p><cite>— Sara P. · Google</cite></blockquote>
-      <blockquote><p data-i18n="reviews.r3">“Price matched exactly what they quoted. Tech was fast and knew what he was doing. Will not be going to a shop for tire changes ever again.”</p><cite>— Marc R. · Google</cite></blockquote>
+      <blockquote class="reveal"><p data-i18n="reviews.r1">“Booked in the morning, they were in my driveway by early afternoon. Whole swap took maybe 40 minutes. Honestly couldn't believe how easy it was.”</p><cite>— Jean-François L. · Google</cite></blockquote>
+      <blockquote class="reveal"><p data-i18n="reviews.r2">“They came to my work parking lot. I didn't leave my desk. Tires swapped and torqued properly — they texted when done.”</p><cite>— Sara P. · Google</cite></blockquote>
+      <blockquote class="reveal"><p data-i18n="reviews.r3">“Price matched exactly what they quoted. Tech was fast and knew what he was doing. Will not be going to a shop for tire changes ever again.”</p><cite>— Marc R. · Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-inner">
+    <p class="kicker reveal" data-i18n="faq.kicker">Questions</p>
+    <h2 class="reveal" data-i18n="faq.title">Good to know</h2>
+    <div class="faq-list">
+      <details class="reveal"><summary data-i18n="faq.q1">How does a mobile mechanic work?</summary><p data-i18n="faq.a1">Our van carries everything a shop bay has — jack, tools, diagnostic gear. We do the work in your driveway, office lot, or wherever your car is parked. You keep your keys and your day.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q2">How much does it cost?</summary><p data-i18n="faq.a2">Services start at $139. You get a firm price on the phone before we come — no surprises, no upsells at your door.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q3">Which areas do you serve?</summary><p data-i18n="faq.a3">All of Greater Montreal — downtown, West Island, Laval, South Shore and beyond. If your car is in Montreal, we come to it.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q4">Can I really get same-day service?</summary><p data-i18n="faq.a4">Yes — call or book in the morning and we're usually at your car by the afternoon. Availability is first-come, so earlier is better.</p></details>
     </div>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <p class="kicker" data-i18n="contact.kicker">Find us</p>
-    <h2 data-i18n="contact.title">Serving all of Montréal</h2>
+    <p class="kicker reveal" data-i18n="contact.kicker">Find us</p>
+    <h2 class="reveal" data-i18n="contact.title">One call. We come to you.</h2>
     <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-row"><span class="contact-label" data-i18n="contact.phone">Phone</span><span><a href="tel:+14388071988">(438) 807-1988</a></span></div>
+      <div class="contact-info reveal">
+        <a href="tel:+14388071988" class="contact-phone">(438) 807-1988</a>
+        <p class="contact-tag" data-i18n="contact.tag">7 days a week · same-day available</p>
         <div class="contact-row"><span class="contact-label" data-i18n="contact.base">Base</span><span>1190 Av. des Canadiens-de-Montréal<br>Montréal, QC</span></div>
-        <div class="contact-row"><span class="contact-label" data-i18n="contact.hours">Hours</span><span data-i18n="contact.hoursVal">7 days a week · same-day available</span></div>
-        <a href="tel:+14388071988" class="btn btn-primary" data-i18n="contact.cta">Call (438) 807-1988</a>
+        <div class="areas">
+          <span data-i18n="contact.area1">Downtown</span><span data-i18n="contact.area2">West Island</span><span data-i18n="contact.area3">Laval</span><span data-i18n="contact.area4">South Shore</span><span data-i18n="contact.area5">East End</span><span data-i18n="contact.area6">NDG</span>
+        </div>
       </div>
-      <div class="contact-map">
-        <iframe title="AAA Mobile Mechanic map" src="https://maps.google.com/maps?q=1190%20Av.%20des%20Canadiens-de-Montr%C3%A9al%2C%20Montr%C3%A9al%20QC&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      <div class="contact-map reveal">
+        <iframe title="AAA Mobile Mechanic map" src="https://maps.google.com/maps?q=1190%20Av.%20des%20Canadiens-de-Montr%C3%A9al%2C%20Montr%C3%A9al%20QC&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -176,11 +216,20 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <span class="brand-text">AAA <strong>Mobile Mechanic</strong></span>
+    <span class="brand-mark">AAA</span>
+    <p class="footer-name">Mobile Mechanic <strong>Montréal</strong></p>
     <p data-i18n="footer.tag">We come to you — anywhere in Montréal</p>
     <p class="footer-small"><a href="tel:+14388071988">(438) 807-1988</a></p>
   </div>
 </footer>
+
+<div class="mobile-cta">
+  <a href="tel:+14388071988" class="btn btn-call btn-block">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-i18n="mobile.call">Call now</span>
+  </a>
+  <a href="#quote" class="btn btn-primary btn-block" data-i18n="mobile.quote">Free quote</a>
+</div>
 
 <script src="app.js"></script>
 </body>
