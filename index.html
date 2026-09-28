@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AAA Mobile Mechanic — Montréal | We Come to You · 5.0★ Rated</title>
+<meta name="description" content="Mobile mechanic in Montreal — oil changes, brakes, tires, diagnostics & battery service at your home or office. Same-day available. From $139. Call (438) 807-1988.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">AAA</span>
+      <span class="brand-text">Mobile Mechanic <strong>Montréal</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="lang-toggle" id="langToggle">FR</button>
+      <a href="tel:+14388071988" class="btn btn-call">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(438) 807-1988</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="images/van.jpg" alt="Mobile mechanic van at a home"></div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="hero-kicker" data-i18n="hero.kicker">⚡ Same-day available · Montréal</p>
+      <h1 data-i18n="hero.title">Your mechanic<br>comes to you.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Oil changes, brakes, tires, diagnostics &amp; more — done in your driveway or office parking lot. No shop, no waiting room.</p>
+      <div class="hero-trust">
+        <span class="stars">★★★★★</span>
+        <span data-i18n="hero.rating"><strong>5.0</strong> · 44 Google reviews</span>
+        <span class="dot">·</span>
+        <span data-i18n="hero.price">From <strong>$139</strong></span>
+      </div>
+    </div>
+    <form class="quote-form" id="quoteForm">
+      <h3 data-i18n="form.title">Get your free quote</h3>
+      <p class="form-sub" data-i18n="form.sub">We call back within minutes.</p>
+      <label>
+        <span data-i18n="form.service">What do you need?</span>
+        <select id="fService" required>
+          <option value="" data-i18n="form.pick">Choose a service…</option>
+          <option data-i18n="form.s1">Oil change</option>
+          <option data-i18n="form.s2">Brakes</option>
+          <option data-i18n="form.s3">Tires</option>
+          <option data-i18n="form.s4">Diagnostics</option>
+          <option data-i18n="form.s5">Battery</option>
+          <option data-i18n="form.s6">Something else</option>
+        </select>
+      </label>
+      <label>
+        <span data-i18n="form.car">Your car (year, make, model)</span>
+        <input type="text" id="fCar" data-i18n-ph="form.carPh" placeholder="e.g. 2020 Honda Civic" required>
+      </label>
+      <div class="form-row">
+        <label>
+          <span data-i18n="form.name">First name</span>
+          <input type="text" id="fName" required>
+        </label>
+        <label>
+          <span data-i18n="form.phone">Phone</span>
+          <input type="tel" id="fPhone" placeholder="514-555-0123" required>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="form.cta">Get my free quote →</button>
+      <p class="form-done" id="formDone" hidden>
+        <strong data-i18n="form.doneT">You're booked 🙌</strong><br>
+        <span data-i18n="form.doneS">Got your request — we're calling right now to lock in your time slot.</span>
+      </p>
+    </form>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap strip-inner">
+    <span data-i18n="strip.1">🔩 Fully mobile — we come to you</span>
+    <span data-i18n="strip.2">📅 Same-day available</span>
+    <span data-i18n="strip.3">🔧 Certified technicians</span>
+    <span data-i18n="strip.4">💰 From $139 · no hidden charges</span>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="kicker" data-i18n="services.kicker">Services</p>
+    <h2 data-i18n="services.title">Everything a shop does, at your door</h2>
+    <div class="service-grid">
+      <article class="service-card"><div class="service-icon">🛢️</div><h3 data-i18n="services.s1t">Oil Change</h3><p data-i18n="services.s1d">Full synthetic oil changes with filter — done while you stay inside.</p><span class="service-from" data-i18n="services.from">from $139</span></article>
+      <article class="service-card"><div class="service-icon">🔧</div><h3 data-i18n="services.s2t">Brakes</h3><p data-i18n="services.s2d">Pads and rotors replaced in your driveway, torqued to spec.</p><span class="service-from" data-i18n="services.quote">free quote</span></article>
+      <article class="service-card"><div class="service-icon">🏎️</div><h3 data-i18n="services.s3t">Tires</h3><p data-i18n="services.s3d">Seasonal swaps and tire repair — pressure checked, ready to roll.</p><span class="service-from" data-i18n="services.from139">from $139</span></article>
+      <article class="service-card"><div class="service-icon">🔍</div><h3 data-i18n="services.s4t">Diagnostics</h3><p data-i18n="services.s4d">Check-engine light and full system scans with pro equipment.</p><span class="service-from" data-i18n="services.quote2">free quote</span></article>
+      <article class="service-card"><div class="service-icon">⚡</div><h3 data-i18n="services.s5t">Battery</h3><p data-i18n="services.s5d">Tested on the spot, replaced on the spot if it's done.</p><span class="service-from" data-i18n="services.quote3">free quote</span></article>
+      <article class="service-card"><div class="service-icon">🚗</div><h3 data-i18n="services.s6t">Something Else?</h3><p data-i18n="services.s6d">Tell us what's wrong — if we can fix it mobile, we will.</p><span class="service-from" data-i18n="services.quote4">free quote</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <p class="kicker" data-i18n="how.kicker">How it works</p>
+    <h2 data-i18n="how.title">Booked in 3 steps</h2>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><h3 data-i18n="how.s1t">Book in 60 seconds</h3><p data-i18n="how.s1d">Fill the form above. We call back fast, confirm your vehicle, and lock in a time.</p></div>
+      <div class="step"><span class="step-num">2</span><h3 data-i18n="how.s2t">We come to you</h3><p data-i18n="how.s2d">Our tech shows up at your home, office, or wherever your car is parked — fully equipped.</p></div>
+      <div class="step"><span class="step-num">3</span><h3 data-i18n="how.s3t">Done in under an hour</h3><p data-i18n="how.s3d">Work completed to spec, area left clean. You never left your day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div class="why-img"><img src="images/tire.jpg" alt="Technician changing a tire at a home"></div>
+    <div class="why-copy">
+      <p class="kicker" data-i18n="why.kicker">Why us</p>
+      <h2 data-i18n="why.title">The smarter way to service your car</h2>
+      <ul class="why-list">
+        <li><strong data-i18n="why.l1t">Fully mobile</strong><span data-i18n="why.l1d">No shop, no waiting room. We show up with everything.</span></li>
+        <li><strong data-i18n="why.l2t">Same-day available</strong><span data-i18n="why.l2d">Call in the morning, serviced by afternoon.</span></li>
+        <li><strong data-i18n="why.l3t">Certified technicians</strong><span data-i18n="why.l3d">Properly torqued, pressure checked, inspected — done right.</span></li>
+        <li><strong data-i18n="why.l4t">Transparent pricing</strong><span data-i18n="why.l4d">From $139. Price confirmed before we show up — no hidden charges.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="kicker kicker-light" data-i18n="reviews.kicker">Reviews</p>
+    <h2 data-i18n="reviews.title">What customers say</h2>
+    <div class="review-score">
+      <span class="score-num">5.0</span>
+      <div><div class="stars">★★★★★</div><p data-i18n="reviews.count">44 Google reviews</p></div>
+    </div>
+    <div class="review-cards">
+      <blockquote><p data-i18n="reviews.r1">“Booked in the morning, they were in my driveway by early afternoon. Whole swap took maybe 40 minutes. Honestly couldn't believe how easy it was.”</p><cite>— Jean-François L. · Google</cite></blockquote>
+      <blockquote><p data-i18n="reviews.r2">“They came to my work parking lot. I didn't leave my desk. Tires swapped and torqued properly — they texted when done.”</p><cite>— Sara P. · Google</cite></blockquote>
+      <blockquote><p data-i18n="reviews.r3">“Price matched exactly what they quoted. Tech was fast and knew what he was doing. Will not be going to a shop for tire changes ever again.”</p><cite>— Marc R. · Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker" data-i18n="contact.kicker">Find us</p>
+    <h2 data-i18n="contact.title">Serving all of Montréal</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-row"><span class="contact-label" data-i18n="contact.phone">Phone</span><span><a href="tel:+14388071988">(438) 807-1988</a></span></div>
+        <div class="contact-row"><span class="contact-label" data-i18n="contact.base">Base</span><span>1190 Av. des Canadiens-de-Montréal<br>Montréal, QC</span></div>
+        <div class="contact-row"><span class="contact-label" data-i18n="contact.hours">Hours</span><span data-i18n="contact.hoursVal">7 days a week · same-day available</span></div>
+        <a href="tel:+14388071988" class="btn btn-primary" data-i18n="contact.cta">Call (438) 807-1988</a>
+      </div>
+      <div class="contact-map">
+        <iframe title="AAA Mobile Mechanic map" src="https://maps.google.com/maps?q=1190%20Av.%20des%20Canadiens-de-Montr%C3%A9al%2C%20Montr%C3%A9al%20QC&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="brand-text">AAA <strong>Mobile Mechanic</strong></span>
+    <p data-i18n="footer.tag">We come to you — anywhere in Montréal</p>
+    <p class="footer-small"><a href="tel:+14388071988">(438) 807-1988</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
